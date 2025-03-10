@@ -7,6 +7,7 @@ const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(movieDetailData);
 useEffect(()=> {
+  
   // console.log(movieListData, movieListData.results);
 })
   // useEffect(() => {
