@@ -1,13 +1,60 @@
+
 body {
+  background-color: #e1f5fe; 
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 24px;
+  font-weight: bold;
+  color: #212121;  
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* 줄바꿈 가능하도록 설정 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 20px;
+  padding: 20px;
+}
+
+.detail-container {
+  display: flex;
+  align-items: flex-start; /* 요소들을 상단 정렬 */
+  gap: 20px; /* 포스터와 정보 사이 간격 */
+}
+
+.poster {
+  flex-shrink: 0; /* 이미지 크기 고정 */
+  width: 300px; /* 포스터 너비 */
+  height: auto;
+}
+
+.info {
+  flex-grow: 1; /* 정보 영역이 남은 공간을 차지 */
+  max-width: 600px; /* 최대 너비 설정 */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 18px;
+  color: gray;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: justify; /* 글 정렬 */
 }
