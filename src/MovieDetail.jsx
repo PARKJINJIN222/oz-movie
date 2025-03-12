@@ -26,7 +26,7 @@ useEffect(()=> {
     } catch (error) {
       console.error ('정보를 받아올 수 없습니다', error);
     }
-  };
+  }; 
   fetchMovieDetail();
 },[id]); 
 // console.log(movieListData, movieListData.results);

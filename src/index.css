@@ -1,11 +1,42 @@
-
 body {
-  background-color: #e1f5fe; 
-  font-family: 'Arial', sans-serif;
+  background-color: #0c111b !important;
+  font-family: 'Arial', sans-serif !important;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar input {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar input:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
 
 .main-content {
   display: flex;
@@ -14,47 +45,61 @@ body {
   height: 80vh;
   font-size: 24px;
   font-weight: bold;
-  color: #212121;  
+  color: white;
 }
 
 .movie-list {
-  display: flex;
-  flex-wrap: wrap; /* 줄바꿈 가능하도록 설정 */
-  justify-content: center; /* 가운데 정렬 */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
+  justify-items: center;
 }
 
-.detail-container {
-  display: flex;
-  align-items: flex-start; /* 요소들을 상단 정렬 */
-  gap: 20px; /* 포스터와 정보 사이 간격 */
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.poster {
-  flex-shrink: 0; /* 이미지 크기 고정 */
-  width: 300px; /* 포스터 너비 */
-  height: auto;
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-.info {
-  flex-grow: 1; /* 정보 영역이 남은 공간을 차지 */
-  max-width: 600px; /* 최대 너비 설정 */
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.movie-info {
+  padding: 10px;
+  text-align: center;
 }
 
-.rating {
+.movie-title {
   font-size: 18px;
-  color: gray;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 16px;
-  text-align: justify; /* 글 정렬 */
+.movie-rating {
+  font-size: 14px;
+  color: #f5c518;
 }
+
+@media (min-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }}
