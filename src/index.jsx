@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
-import MovieDetail from './MovieDetail.jsx';
-import Layout from './Layout.jsx';
-import './index.css';
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import MovieDetail from "./MovieDetail.jsx";
+import Layout from "./Layout.jsx";
+import "./index.scss";
 
 const root = createRoot(document.getElementById("root"));
 
